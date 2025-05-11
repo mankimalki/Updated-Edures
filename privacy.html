@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Improved viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EduResources - Free UK Education Resources, Past Papers & Study Materials</title>
+    <meta name="description" content="Free educational resources including past papers, syllabus, textbooks, quizzes and study notes for GCSE, A-Levels, IGCSE and more. Supported by all major UK exam boards.">
+    <meta name="keywords" content="past papers, GCSE, A-Level, syllabus, free textbooks, exam resources, revision materials, AQA, Edexcel, OCR, study notes, free education">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EduResources">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="mask-icon" href="safari-icon.svg" color="#2c3e50">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="EduResources - Free UK Education Resources">
+    <meta property="og:description" content="Access thousands of free educational resources to help you succeed in your exams and studies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduresources.org">
+    <meta property="og:image" content="https://eduresources.org/images/og-image.jpg">
+    <meta property="og:site_name" content="EduResources">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EduResources - Free UK Education Resources">
+    <meta name="twitter:description" content="Access thousands of free educational resources to help you succeed in your exams and studies">
+    <meta name="twitter:image" content="https://eduresources.org/images/twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://eduresources.org">
+    
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.core.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.core.min.css"></noscript>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #7f8c8d;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.2s ease;
+            --max-content-width: 1200px;
+            --content-padding: clamp(15px, 3vw, 40px);
+            --base-font-size: clamp(16px, 1.5vw, 18px);
+        }
+
+        /* Base Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            font-size: var(--base-font-size);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            padding-bottom: 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            padding: 0 var(--content-padding);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            padding: 0 var(--content-padding);
+        }
+
+        .logo {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .logo i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Navigation */
+        .mobile-donate-btn {
+            display: none;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            align-items: center;
+            gap: 5px;
+            animation: pulse 2s infinite;
+            transition: var(--transition);
+        }
+
+        .desktop-nav {
+            display: none;
+        }
+
+        .desktop-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+            white-space: nowrap;
+        }
+
+        .desktop-nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .desktop-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .donate-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: clamp(8px, 1vw, 12px) clamp(15px, 2vw, 25px);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            animation: pulse 2s infinite;
+            transition: var(--transition);
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            margin-left: clamp(10px, 2vw, 25px);
+        }
+
+        .donate-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: clamp(40px, 6vw, 80px) 0;
+            text-align: center;
+            margin-bottom: clamp(20px, 3vw, 40px);
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: clamp(10px, 2vw, 20px);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin: 0 auto clamp(20px, 3vw, 30px);
+            max-width: min(700px, 90%);
+            font-size: clamp(1rem, 1.8vw, 1.3rem);
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Privacy Content */
+        .privacy-content {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: clamp(25px, 4vw, 50px);
+            box-shadow: var(--card-shadow);
+            margin: clamp(20px, 4vw, 40px) 0;
+            max-width: min(900px, 100%);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .privacy-content h2 {
+            color: var(--primary-color);
+            margin: clamp(20px, 3vw, 30px) 0 clamp(15px, 2vw, 20px);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .privacy-content h3 {
+            color: var(--secondary-color);
+            margin: clamp(20px, 3vw, 25px) 0 clamp(10px, 1.5vw, 15px);
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        .privacy-content p {
+            margin-bottom: clamp(15px, 2vw, 20px);
+            color: var(--primary-color);
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
+            line-height: 1.7;
+        }
+
+        .privacy-content ul {
+            margin-bottom: clamp(20px, 3vw, 25px);
+            padding-left: clamp(20px, 3vw, 25px);
+        }
+
+        .privacy-content li {
+            margin-bottom: clamp(8px, 1vw, 10px);
+            line-height: 1.6;
+        }
+
+        .privacy-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .privacy-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--dark-gray);
+            text-align: right;
+            margin-top: clamp(25px, 4vw, 40px);
+            font-size: clamp(0.85rem, 1vw, 0.95rem);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: clamp(40px, 6vw, 60px) 0 clamp(20px, 3vw, 30px);
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+            gap: clamp(20px, 3vw, 30px);
+            margin-bottom: clamp(20px, 3vw, 30px);
+        }
+
+        .footer-column h3 {
+            margin-bottom: clamp(12px, 2vw, 20px);
+            color: var(--secondary-color);
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .footer-column a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+            opacity: 0.9;
+            display: block;
+            padding: clamp(3px, 0.5vw, 5px) 0;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: clamp(20px, 3vw, 30px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            opacity: 0.8;
+        }
+
+        /* Utility Classes */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: clamp(10px, 1.5vw, 12px) clamp(20px, 2.5vw, 28px);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: clamp(0.95rem, 1.2vw, 1rem);
+            text-align: center;
+        }
+
+        .breadcrumb {
+            padding: clamp(15px, 2vw, 20px) 0;
+            font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+        }
+
+.whatsapp-float {
+    position: fixed;
+    width: clamp(50px, 6vw, 60px);
+    height: clamp(50px, 6vw, 60px);
+    bottom: clamp(70px, 5vw, 80px);
+    right: clamp(20px, 3vw, 30px);
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: clamp(25px, 3vw, 30px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* remove underline */
+    line-height: 0; /* fix spacing glitches */
+    border: none; /* ensure no border */
+}
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-around;
+            padding: clamp(10px, 1.5vw, 12px) 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
+            transition: var(--transition);
+        }
+
+        .nav-item i {
+            font-size: clamp(1.2rem, 1.8vw, 1.3rem);
+            margin-bottom: clamp(3px, 0.5vw, 5px);
+        }
+
+        .nav-item.active {
+            color: var(--secondary-color);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        /* Donation Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .donation-modal {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: clamp(25px, 3vw, 40px);
+            max-width: min(500px, 90vw);
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .donation-modal {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: clamp(15px, 2vw, 20px);
+            right: clamp(15px, 2vw, 20px);
+            font-size: clamp(1.3rem, 2vw, 1.5rem);
+            cursor: pointer;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: clamp(10px, 1.5vw, 15px);
+            margin: clamp(15px, 2vw, 25px) 0;
+        }
+
+        .donation-option {
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: clamp(12px, 1.5vw, 15px);
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: clamp(15px, 2vw, 25px);
+            }
+            
+            .mobile-donate-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .mobile-donate-btn {
+                display: flex;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .privacy-content {
+                padding: 20px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+
+            .hero, footer, .bottom-nav, .whatsapp-float, .donate-btn {
+                display: none !important;
+            }
+
+            .privacy-content {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            a {
+                color: black !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Donation Modal -->
+    <div class="modal-overlay" id="donationModal">
+        <div class="donation-modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Support Our Mission</h2>
+            <p>We provide free educational resources to students worldwide. Your donation helps us maintain and expand our services.</p>
+            
+            <div class="donation-options">
+                <div class="donation-option">£5</div>
+                <div class="donation-option">£10</div>
+                <div class="donation-option selected">£20</div>
+                <div class="donation-option">£50</div>
+                <div class="donation-option">Other</div>
+            </div>
+            
+            <button class="btn" style="width: 100%;">Donate Now</button>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">Thank you for your support!</p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+923379244731" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-book-open"></i>
+                EduResources
+            </a>
+            
+            <button class="mobile-donate-btn" id="mobileDonateBtn">
+                <i class="fas fa-heart"></i>
+                Donate
+            </button>
+            
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="pastpapers.html">Past Papers</a>
+                <a href="resources.html">Resources</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button class="donate-btn" id="desktopDonateBtn">
+                    <i class="fas fa-heart"></i> Donate
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we protect your information.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="privacy-content">
+            <h2>Privacy Policy for EduResources</h2>
+            <p>Last Updated: <span class="last-updated">June 1, 2025</span></p>
+            
+            <p>Welcome to EduResources ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://eduresources.co.uk">eduresources.co.uk</a>.</p>
+            
+            <h3>1. Information We Collect</h3>
+            <p>We may collect the following types of information:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> When you register for an account, subscribe to our newsletter, or contact us, we may collect your name, email address, and other contact details.</li>
+                <li><strong>Usage Data:</strong> We automatically collect information about how you interact with our website, including pages visited, time spent, and referring websites.</li>
+                <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies to enhance your experience and analyze website traffic.</li>
+            </ul>
+            
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the collected information for various purposes:</p>
+            <ul>
+                <li>To provide and maintain our educational resources</li>
+                <li>To notify you about changes to our service</li>
+                <li>To allow you to participate in interactive features</li>
+                <li>To provide customer support</li>
+                <li>To gather analysis to improve our website</li>
+                <li>To monitor the usage of our website</li>
+                <li>To detect, prevent, and address technical issues</li>
+            </ul>
+            
+            <h3>3. Data Sharing and Disclosure</h3>
+            <p>We may share your information in the following situations:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> We may employ third-party companies to facilitate our service, provide the service on our behalf, or assist us in analyzing how our service is used.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, your personal data may be transferred.</li>
+            </ul>
+            
+            <h3>4. Data Security</h3>
+            <p>We implement appropriate technical and organizational measures to protect your personal information. However, no internet transmission or electronic storage is completely secure, so we cannot guarantee absolute security.</p>
+            
+            <h3>5. Children's Privacy</h3>
+            <p>Our service does not address anyone under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.</p>
+            
+            <h3>6. Your Data Protection Rights</h3>
+            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li>The right to access, update, or delete your information</li>
+                <li>The right of rectification if your information is inaccurate</li>
+                <li>The right to object to our processing of your data</li>
+                <li>The right to request restriction of processing</li>
+                <li>The right to data portability</li>
+                <li>The right to withdraw consent</li>
+            </ul>
+            
+            <h3>7. Cookies and Tracking Technologies</h3>
+            <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+            
+            <h3>8. Third-Party Services</h3>
+            <p>We may use third-party services such as Google Analytics to analyze website usage. These services may use cookies and similar technologies to collect information about your use of our website.</p>
+            
+            <h3>9. Changes to This Privacy Policy</h3>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+            
+            <h3>10. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li>By email: eduresources@gmaip.com</li>
+                <li>By visiting our <a href="contact.html">contact page</a></li>
+            </ul>
+            
+            <p class="last-updated">This policy was last updated on June 1, 2025.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Qualifications</h3>
+                    <ul>
+                        <li><a href="gcse.html">GCSE</a></li>
+                        <li><a href="alevels.html">A-Levels</a></li>
+                        <li><a href="igcse.html">IGCSE</a></li>
+                        <li><a href="sats.html">SATs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="notes.html">Study Notes</a></li>
+                        <li><a href="books.html">Textbooks</a></li>
+                        <li><a href="worksheets.html">Worksheets</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="tutoring.html">Tutoring</a></li>
+                        <li><a href="blog.html">Study Blog</a></li>
+                        <li><a href="tips.html">Exam Tips</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 EduResources. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="pastpapers.html" class="nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Papers</span>
+        </a>
+        <a href="resources.html" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>Resources</span>
+        </a>
+        <a href="about.html" class="nav-item">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+    </nav>
+
+    <script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+
+        // Cache resources for offline use
+        const cacheResources = async () => {
+            if ('caches' in window) {
+                const cache = await caches.open('eduresources-v1');
+                await cache.addAll([
+                    '/',
+                    '/index.html',
+                    '/privacy.html',
+                    '/styles/main.css',
+                    '/scripts/main.js',
+                    '/images/logo.png',
+                ]);
+                console.log('Resources cached');
+            }
+        };
+
+        window.addEventListener('load', cacheResources);
+
+        // Donation Modal
+        const donationModal = document.getElementById('donationModal');
+        const desktopDonateBtn = document.getElementById('desktopDonateBtn');
+        const mobileDonateBtn = document.getElementById('mobileDonateBtn');
+        const closeModal = document.getElementById('closeModal');
+
+        // Show modal when donate buttons are clicked
+        if (desktopDonateBtn) {
+            desktopDonateBtn.addEventListener('click', () => {
+                donationModal.classList.add('active');
+            });
+        }
+
+        if (mobileDonateBtn) {
+            mobileDonateBtn.addEventListener('click', () => {
+                donationModal.classList.add('active');
+            });
+        }
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            donationModal.classList.remove('active');
+        });
+
+        // Close modal when clicking outside
+        donationModal.addEventListener('click', (e) => {
+            if (e.target === donationModal) {
+                donationModal.classList.remove('active');
+            }
+        });
+
+        // Donation option selection
+        const donationOptions = document.querySelectorAll('.donation-option');
+        donationOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // WhatsApp button click tracking
+        const whatsappButton = document.querySelector('.whatsapp-float');
+        if (whatsappButton) {
+            whatsappButton.addEventListener('click', () => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'WhatsApp',
+                        'event_label': 'Privacy Page WhatsApp Click'
+                    });
+                }
+            });
+        }
+
+        // Show modal on page load after 3 seconds
+        setTimeout(() => {
+            donationModal.classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>

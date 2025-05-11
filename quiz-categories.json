@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": "maths-gcse-aqa",
+      "title": "GCSE AQA Algebra (Foundation)",
+      "description": "Algebra topics for GCSE AQA Foundation tier",
+      "keyStage": "KS4",
+      "subject": "Maths",
+      "examBoard": "AQA",
+      "icon": "fa-square-root-alt",
+      "questionCount": 120,
+      "duration": 10
+    },
+    {
+      "id": "maths-gcse-edexcel",
+      "title": "GCSE Edexcel Geometry",
+      "description": "Geometry topics for GCSE Edexcel",
+      "keyStage": "KS4",
+      "subject": "Maths",
+      "examBoard": "Edexcel",
+      "icon": "fa-shapes",
+      "questionCount": 90,
+      "duration": 8
+    },
+    {
+      "id": "science-ks3",
+      "title": "KS3 Science Basics",
+      "description": "Fundamental science concepts for Key Stage 3",
+      "keyStage": "KS3",
+      "subject": "Science",
+      "examBoard": null,
+      "icon": "fa-flask",
+      "questionCount": 150,
+      "duration": 15
+    },
+    {
+      "id": "biology-a-level",
+      "title": "A-Level Biology (OCR)",
+      "description": "Advanced biology topics for A-Level OCR specification",
+      "keyStage": "KS5",
+      "subject": "Biology",
+      "examBoard": "OCR",
+      "icon": "fa-dna",
+      "questionCount": 200,
+      "duration": 20
+    },
+    {
+      "id": "english-ks2",
+      "title": "KS2 English Comprehension",
+      "description": "Reading comprehension practice for Key Stage 2",
+      "keyStage": "KS2",
+      "subject": "English",
+      "examBoard": null,
+      "icon": "fa-book-open",
+      "questionCount": 80,
+      "duration": 10
+    }
+  ]
+}

@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Educational Resources - Study Materials | EduResources</title>
+    <meta name="description" content="Access free study notes, textbooks, worksheets, quizzes, syllabus guides and exam tips for all UK qualifications">
+    <meta name="keywords" content="study notes, textbooks, worksheets, quizzes, syllabus, exam tips, GCSE, A-Level">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EduResources">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="mask-icon" href="safari-icon.svg" color="#2c3e50">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://eduresources.co.uk/resources.html">
+    
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+<!-- Preload Font Awesome with fallback -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+<!-- Preload Google Fonts with font-display: swap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #7f8c8d;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.2s ease;
+        }
+
+        /* Base styles */
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header styles */
+        header {
+            background-color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .logo i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Donate button styles */
+        .mobile-donate-btn {
+            display: none;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            align-items: center;
+            gap: 0.3rem;
+            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .desktop-nav {
+            display: none;
+        }
+
+        .desktop-nav .donate-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+
+        /* Search bar */
+        .search-container {
+            max-width: 600px;
+            margin: 1rem auto 2rem;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            padding-right: 3.2rem;
+            border-radius: 50px;
+            border: 1px solid var(--medium-gray);
+            font-size: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            line-height: 1.2;
+        }
+
+        .search-container input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 2px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-container button {
+            position: absolute;
+            top: 50%;
+            right: 1.2rem;
+            transform: translateY(-50%);
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            line-height: 1;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .search-container button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Section title */
+        .section-title {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            padding-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateY(-50%);
+            bottom: 0;
+            width: 5rem;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        /* Resources grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .resource-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid var(--medium-gray);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .resource-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .resource-card p {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #2980b9;
+        }
+
+        /* Exam boards */
+        .exam-boards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .exam-board-logo {
+            background-color: var(--white);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            border: 1px solid var(--medium-gray);
+        }
+
+        /* Social sharing */
+        .social-sharing {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .social-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .facebook { background-color: #3b5998; }
+        .twitter { background-color: #1DA1F2; }
+        .whatsapp { background-color: #25D366; }
+        .instagram { 
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        .linkedin { background-color: #0077B5; }
+        .email { background-color: var(--primary-color); }
+
+        /* CTA section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            margin: 2.5rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.85rem;
+            opacity: 0.9;
+            display: block;
+            padding: 0.2rem 0;
+        }
+
+        .footer-column a:hover {
+            color: var(--secondary-color);
+            opacity: 1;
+            padding-left: 0.3rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            opacity: 0.8;
+            padding: 1rem;
+        }
+
+        /* Bottom navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.8rem 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+        }
+
+        .nav-item i {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .nav-item.active {
+            color: var(--secondary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: var(--dark-gray);
+            margin: 0 0.5rem;
+        }
+
+        /* No results message */
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 2rem;
+            color: var(--dark-gray);
+            font-size: 1rem;
+        }
+
+        /* Donation Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .donation-modal {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .donation-modal {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            background: none;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .donation-option {
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .donation-option:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .donation-option.selected {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+            }
+            
+            .desktop-nav a {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: var(--transition);
+                font-size: 0.95rem;
+            }
+            
+            .desktop-nav a:hover {
+                color: var(--secondary-color);
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .mobile-donate-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .mobile-donate-btn {
+                display: flex;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .resource-card {
+                padding: 1.2rem;
+            }
+
+            .resource-icon {
+                font-size: 2rem;
+            }
+
+            .exam-board-logo {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Donation Modal (initially hidden) -->
+    <div class="modal-overlay" id="donationModal">
+        <div class="donation-modal">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Support Our Mission</h2>
+            <p>We provide free educational resources to students worldwide. Your donation helps us maintain and expand our services.</p>
+            
+            <div class="donation-options">
+                <div class="donation-option">£5</div>
+                <div class="donation-option">£10</div>
+                <div class="donation-option selected">£20</div>
+                <div class="donation-option">£50</div>
+                <div class="donation-option">Other</div>
+            </div>
+            
+            <button class="btn" style="width: 100%;">Donate Now</button>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">Thank you for your support!</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-book-open"></i>
+                EduResources
+            </a>
+            
+            <button class="mobile-donate-btn" id="mobileDonateBtn">
+                <i class="fas fa-heart"></i>
+                Donate
+            </button>
+            
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="pastpapers.html">Past Papers</a>
+                <a href="resources.html" class="active">Resources</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button class="donate-btn" id="desktopDonateBtn">
+                    <i class="fas fa-heart"></i> Donate
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Educational Resources</h1>
+            <p>Access free study materials for all UK qualifications and exam boards</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="resources.html">Resources</a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search resources...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="section-title">
+            <h2>Browse Our Resources</h2>
+        </div>
+
+        <div class="resources-grid" id="resourcesContainer">
+            <!-- Study Notes Card -->
+            <a href="notes.html" class="resource-card" data-search="study notes revision subject exam board">
+                <div class="resource-icon">
+                    <i class="fas fa-sticky-note"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Study Notes</h3>
+                    <p>Comprehensive revision notes for all subjects and exam boards</p>
+                    <div class="btn">View Notes</div>
+                </div>
+            </a>
+            
+            <!-- Textbooks Card -->
+            <a href="books.html" class="resource-card" data-search="textbooks books digital free download">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Textbooks</h3>
+                    <p>Free digital textbooks covering all major qualifications</p>
+                    <div class="btn">Browse Textbooks</div>
+                </div>
+            </a>
+            
+            <!-- Worksheets Card -->
+            <a href="worksheets.html" class="resource-card" data-search="worksheets practice printable answer keys">
+                <div class="resource-icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Worksheets</h3>
+                    <p>Printable practice sheets with answer keys</p>
+                    <div class="btn">Get Worksheets</div>
+                </div>
+            </a>
+            
+            <!-- Quizzes Card -->
+            <a href="quizzes.html" class="resource-card" data-search="quizzes tests interactive feedback">
+                <div class="resource-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Quizzes</h3>
+                    <p>Interactive tests with instant feedback</p>
+                    <div class="btn">Take Quizzes</div>
+                </div>
+            </a>
+            
+            <!-- Syllabus Guides Card -->
+            <a href="syllabus.html" class="resource-card" data-search="syllabus guides specifications exam">
+                <div class="resource-icon">
+                    <i class="fas fa-list-alt"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Syllabus Guides</h3>
+                    <p>Detailed breakdowns of exam specifications</p>
+                    <div class="btn">View Syllabi</div>
+                </div>
+            </a>
+            
+            <!-- Exam Tips Card -->
+            <a href="tips.html" class="resource-card" data-search="exam tips strategies marks revision">
+                <div class="resource-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Exam Tips</h3>
+                    <p>Proven strategies to maximize your marks</p>
+                    <div class="btn">Learn Tips</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-title">
+            <h2>Supported Exam Boards</h2>
+        </div>
+        
+        <div class="exam-boards">
+            <div class="exam-board-logo">AQA</div>
+            <div class="exam-board-logo">Edexcel</div>
+            <div class="exam-board-logo">OCR</div>
+            <div class="exam-board-logo">WJEC/Eduqas</div>
+            <div class="exam-board-logo">Cambridge (CIE)</div>
+        </div>
+
+        <!-- Social Sharing -->
+        <div class="social-sharing">
+            <a href="#" class="social-icon facebook" onclick="shareOnSocial('facebook')">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon twitter" onclick="shareOnSocial('twitter')">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon whatsapp" onclick="shareOnSocial('whatsapp')">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-icon instagram" onclick="shareOnSocial('instagram')">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon linkedin" onclick="shareOnSocial('linkedin')">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon email" onclick="shareViaEmail()">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Boost Your Grades?</h2>
+                <p>Join thousands of students using our free resources to succeed</p>
+                <a href="about.html" class="btn">Get Started Now</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Qualifications</h3>
+                    <ul>
+                        <li><a href="gcse.html">GCSE</a></li>
+                        <li><a href="alevels.html">A-Levels</a></li>
+                        <li><a href="igcse.html">IGCSE</a></li>
+                        <li><a href="sats.html">SATs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="notes.html">Study Notes</a></li>
+                        <li><a href="books.html">Textbooks</a></li>
+                        <li><a href="worksheets.html">Worksheets</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="tutoring.html">Tutoring</a></li>
+                        <li><a href="blog.html">Study Blog</a></li>
+                        <li><a href="tips.html">Exam Tips</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 EduResources. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="pastpapers.html" class="nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Papers</span>
+        </a>
+        <a href="resources.html" class="nav-item active">
+            <i class="fas fa-book"></i>
+            <span>Resources</span>
+        </a>
+        <a href="about.html" class="nav-item">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+    </nav>
+
+    <script>
+        // Document ready function
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize donation modal
+            const donationModal = document.getElementById('donationModal');
+            const desktopDonateBtn = document.getElementById('desktopDonateBtn');
+            const mobileDonateBtn = document.getElementById('mobileDonateBtn');
+            const closeModal = document.getElementById('closeModal');
+            const donationOptions = document.querySelectorAll('.donation-option');
+
+            // Show modal when donate buttons are clicked
+            if (desktopDonateBtn) {
+                desktopDonateBtn.addEventListener('click', showModal);
+            }
+
+            if (mobileDonateBtn) {
+                mobileDonateBtn.addEventListener('click', showModal);
+            }
+
+            // Close modal
+            closeModal.addEventListener('click', hideModal);
+
+            // Close modal when clicking outside
+            donationModal.addEventListener('click', function(e) {
+                if (e.target === donationModal) {
+                    hideModal();
+                }
+            });
+
+            // Donation option selection
+            donationOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    donationOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            function showModal() {
+                donationModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function hideModal() {
+                donationModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Initialize search functionality
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
+            const resourceCards = document.querySelectorAll('.resource-card');
+
+            if (searchButton && searchInput) {
+                searchButton.addEventListener('click', performSearch);
+                searchInput.addEventListener('keyup', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const resourcesContainer = document.getElementById('resourcesContainer');
+                let foundResults = false;
+
+                // Remove any existing no-results message
+                const existingNoResults = document.querySelector('.no-results');
+                if (existingNoResults) {
+                    existingNoResults.remove();
+                }
+
+                if (searchTerm === '') {
+                    // Show all cards if search is empty
+                    resourceCards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                    return;
+                }
+
+                resourceCards.forEach(card => {
+                    const searchData = card.getAttribute('data-search').toLowerCase();
+                    const cardText = card.textContent.toLowerCase();
+                    
+                    if (searchData.includes(searchTerm) || cardText.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        foundResults = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (!foundResults) {
+                    const noResults = document.createElement('p');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No resources found matching your search. Try different keywords.';
+                    resourcesContainer.appendChild(noResults);
+                }
+            }
+
+            // Social sharing functions
+            window.shareOnSocial = function(platform) {
+                const url = encodeURIComponent(window.location.href);
+                const title = encodeURIComponent(document.title);
+                const text = encodeURIComponent("Check out these free educational resources from EduResources");
+                let shareUrl = '';
+                
+                switch(platform) {
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                        break;
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl = `https://wa.me/?text=${text}%20${url}`;
+                        break;
+                    case 'instagram':
+                        shareUrl = `https://www.instagram.com/`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${text}`;
+                        break;
+                }
+                
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+            window.shareViaEmail = function() {
+                const subject = encodeURIComponent("Check out these educational resources");
+                const body = encodeURIComponent(`I thought you might find these resources helpful:\n\n${window.location.href}\n\n- Shared via EduResources`);
+                window.location.href = `mailto:?subject=${subject}&body=${body}`;
+            };
+        });
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "question": "What is the value of π (pi) rounded to two decimal places?",
+      "options": ["3.14", "3.16", "3.18", "3.12"],
+      "correctAnswer": 0,
+      "explanation": "The value of π (pi) is approximately 3.14159. When rounded to two decimal places, it becomes 3.14."
+    },
+    {
+      "question": "What is the square root of 144?",
+      "options": ["11", "12", "13", "14"],
+      "correctAnswer": 1,
+      "explanation": "12 × 12 = 144, so the square root of 144 is 12."
+    },
+    {
+      "question": "What is 7 × 8?",
+      "options": ["54", "56", "58", "60"],
+      "correctAnswer": 1,
+      "explanation": "7 multiplied by 8 equals 56."
+    },
+    {
+      "question": "What is 15% of 200?",
+      "options": ["20", "25", "30", "35"],
+      "correctAnswer": 2,
+      "explanation": "15% of 200 is 0.15 × 200 = 30."
+    },
+    {
+      "question": "What is the next prime number after 7?",
+      "options": ["9", "10", "11", "13"],
+      "correctAnswer": 2,
+      "explanation": "The prime numbers after 7 are 11, 13, etc. So the next is 11."
+    },
+    {
+      "question": "How many sides does a hexagon have?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": 1,
+      "explanation": "A hexagon has 6 sides."
+    },
+    {
+      "question": "What is the product of 9 and 6?",
+      "options": ["54", "56", "58", "60"],
+      "correctAnswer": 0,
+      "explanation": "9 × 6 = 54."
+    },
+    {
+      "question": "What is the value of 2³?",
+      "options": ["6", "8", "9", "12"],
+      "correctAnswer": 1,
+      "explanation": "2³ = 2 × 2 × 2 = 8."
+    },
+    {
+      "question": "How many degrees are in a right angle?",
+      "options": ["45", "90", "180", "360"],
+      "correctAnswer": 1,
+      "explanation": "A right angle is 90 degrees."
+    },
+    {
+      "question": "What is 100 divided by 4?",
+      "options": ["20", "25", "30", "35"],
+      "correctAnswer": 1,
+      "explanation": "100 ÷ 4 = 25."
+    },
+    {
+      "question": "Which is a multiple of 12?",
+      "options": ["22", "24", "26", "28"],
+      "correctAnswer": 1,
+      "explanation": "12 × 2 = 24, so 24 is a multiple of 12."
+    },
+    {
+      "question": "What is 3² + 4²?",
+      "options": ["25", "26", "27", "30"],
+      "correctAnswer": 0,
+      "explanation": "3² = 9, 4² = 16, 9 + 16 = 25."
+    },
+    {
+      "question": "How many minutes are in 2 hours?",
+      "options": ["90", "100", "120", "150"],
+      "correctAnswer": 2,
+      "explanation": "2 × 60 = 120 minutes."
+    },
+    {
+      "question": "What is half of 0.6?",
+      "options": ["0.2", "0.3", "0.4", "0.5"],
+      "correctAnswer": 1,
+      "explanation": "0.6 ÷ 2 = 0.3."
+    },
+    {
+      "question": "What is the area of a rectangle with length 5 and width 3?",
+      "options": ["15", "8", "12", "18"],
+      "correctAnswer": 0,
+      "explanation": "Area = length × width = 5 × 3 = 15."
+    },
+    {
+      "question": "What is the result of 10²?",
+      "options": ["20", "50", "100", "200"],
+      "correctAnswer": 2,
+      "explanation": "10² = 100."
+    },
+    {
+      "question": "What is 0.75 as a fraction?",
+      "options": ["1/4", "1/2", "3/4", "2/3"],
+      "correctAnswer": 2,
+      "explanation": "0.75 is equivalent to 3/4."
+    },
+    {
+      "question": "Which number is both a square and a cube?",
+      "options": ["4", "9", "36", "64"],
+      "correctAnswer": 3,
+      "explanation": "64 = 8² and 4³, so it's both a square and a cube."
+    },
+    {
+      "question": "What is the perimeter of a square with side length 6?",
+      "options": ["24", "18", "12", "36"],
+      "correctAnswer": 0,
+      "explanation": "Perimeter = 4 × side = 4 × 6 = 24."
+    },
+    {
+      "question": "How many hours are there in 3 days?",
+      "options": ["48", "60", "72", "96"],
+      "correctAnswer": 2,
+      "explanation": "3 × 24 = 72 hours."
+    },
+    {
+      "question": "What is 1/2 + 1/4?",
+      "options": ["3/4", "2/4", "1/2", "1"],
+      "correctAnswer": 0,
+      "explanation": "1/2 + 1/4 = 2/4 + 1/4 = 3/4."
+    },
+    {
+      "question": "What is the smallest prime number?",
+      "options": ["1", "2", "3", "5"],
+      "correctAnswer": 1,
+      "explanation": "2 is the smallest and only even prime number."
+    },
+    {
+      "question": "How many grams are there in a kilogram?",
+      "options": ["100", "500", "1000", "1200"],
+      "correctAnswer": 2,
+      "explanation": "1 kilogram = 1000 grams."
+    },
+    {
+      "question": "What is 11 × 11?",
+      "options": ["111", "121", "131", "141"],
+      "correctAnswer": 1,
+      "explanation": "11 × 11 = 121."
+    },
+    {
+      "question": "How many months have 31 days?",
+      "options": ["6", "7", "8", "9"],
+      "correctAnswer": 1,
+      "explanation": "January, March, May, July, August, October, December — 7 months."
+    },
+    {
+      "question": "What is 0.2 × 0.5?",
+      "options": ["0.01", "0.1", "0.15", "0.2"],
+      "correctAnswer": 1,
+      "explanation": "0.2 × 0.5 = 0.1."
+    },
+    {
+      "question": "What is 5 squared?",
+      "options": ["10", "20", "25", "30"],
+      "correctAnswer": 2,
+      "explanation": "5 squared means 5 × 5 = 25."
+    },
+    {
+      "question": "What is 1.5 + 2.3?",
+      "options": ["3.7", "3.8", "3.9", "4.0"],
+      "correctAnswer": 1,
+      "explanation": "1.5 + 2.3 = 3.8."
+    },
+    {
+      "question": "What is the mode of this list: [2, 3, 3, 5, 6]?",
+      "options": ["2", "3", "5", "6"],
+      "correctAnswer": 1,
+      "explanation": "3 appears most often."
+    },
+    {
+      "question": "What is the median of: 1, 2, 3, 4, 5?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": 1,
+      "explanation": "The median (middle value) is 3."
+    },
+    {
+      "question": "What is the missing number: 2, 4, ?, 8, 10",
+      "options": ["5", "6", "7", "9"],
+      "correctAnswer": 1,
+      "explanation": "The pattern increases by 2, so 6 is missing."
+    },
+    {
+      "question": "How many sides does an octagon have?",
+      "options": ["6", "7", "8", "9"],
+      "correctAnswer": 2,
+      "explanation": "An octagon has 8 sides."
+    },
+    {
+      "question": "What is 6 × 7?",
+      "options": ["42", "44", "46", "48"],
+      "correctAnswer": 0,
+      "explanation": "6 × 7 = 42."
+    },
+    {
+      "question": "What is 4.5 + 3.5?",
+      "options": ["6.5", "7.5", "8.0", "8.5"],
+      "correctAnswer": 2,
+      "explanation": "4.5 + 3.5 = 8.0."
+    },
+    {
+      "question": "What is 9²?",
+      "options": ["81", "91", "99", "101"],
+      "correctAnswer": 0,
+      "explanation": "9 × 9 = 81."
+    },
+    {
+      "question": "What is the cube root of 27?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": 1,
+      "explanation": "3 × 3 × 3 = 27, so the cube root is 3."
+    },
+    {
+      "question": "Which is a factor of 36?",
+      "options": ["5", "6", "7", "9"],
+      "correctAnswer": 1,
+      "explanation": "6 × 6 = 36, so 6 is a factor."
+    },
+    {
+      "question": "What is 0.1 + 0.2?",
+      "options": ["0.2", "0.3", "0.4", "0.5"],
+      "correctAnswer": 1,
+      "explanation": "0.1 + 0.2 = 0.3."
+    },
+    {
+      "question": "How many centimetres in a metre?",
+      "options": ["10", "100", "1000", "10000"],
+      "correctAnswer": 1,
+      "explanation": "1 metre = 100 cm."
+    },
+    {
+      "question": "What is 2.5 × 4?",
+      "options": ["8", "9", "10", "11"],
+      "correctAnswer": 2,
+      "explanation": "2.5 × 4 = 10."
+    }
+  ]
+}
